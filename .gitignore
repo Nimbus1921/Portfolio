@@ -3,4 +3,9 @@ Thumbs.db
 *.pyc
 __pycache__/
 scratch/
+Dynamic-Portfolio-Website--main/
+original.html
+Gsap X Webflow.html
+build_portfolio.py
+update_portfolio.py
 
