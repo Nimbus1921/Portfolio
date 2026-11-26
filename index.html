@@ -3177,6 +3177,18 @@
                 const roadPaths = section.querySelectorAll(".road-path");
                 const airplane = section.querySelector("#m9-airplane");
 
+// Milestone progress definitions
+                const milestones = [
+                  { el: "#m1-beginning", prog: 0.038 },
+                  { el: "#m2-school", prog: 0.103 },
+                  { el: "#m3-class12", prog: 0.170 },
+                  { el: "#m4-college", prog: 0.269 },
+                  { el: "#m6-creator", prog: 0.446 },
+                  { el: "#m5-projects", prog: 0.616 },
+                  { el: "#m7-startup", prog: 0.788 },
+                  { el: "#m8-future", prog: 0.938 }
+                ];
+
                 // Mobile check (<= 768px): Natural vertical road timeline with clean staggered entrance
                 if (window.innerWidth <= 768) {
                   if (stageWrap) gsap.set(stageWrap, { autoAlpha: 1 });
@@ -3224,19 +3236,7 @@
                   });
                 }
 
-                // Milestone progress definitions
-                const milestones = [
-                  { el: "#m1-beginning", prog: 0.038 },
-                  { el: "#m2-school", prog: 0.103 },
-                  { el: "#m3-class12", prog: 0.170 },
-                  { el: "#m4-college", prog: 0.269 },
-                  { el: "#m6-creator", prog: 0.446 },
-                  { el: "#m5-projects", prog: 0.616 },
-                  { el: "#m7-startup", prog: 0.788 },
-                  { el: "#m8-future", prog: 0.938 }
-                ];
-
-                milestones.forEach(m => {
+milestones.forEach(m => {
                   const node = section.querySelector(m.el);
                   if (node) gsap.set(node, { autoAlpha: 0, scale: 0.75, y: 35 });
                 });
