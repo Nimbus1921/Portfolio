@@ -1523,10 +1523,8 @@
           </a>
         </div>
 
-
-  </div>
   <div data-hero="layer" class="layer hero-alt"
-    style="translate: none; rotate: none; scale: none; transform: translate(0%, 10%); opacity: 1; visibility: inherit;"></div>
+    style="display: none !important;"></div>
   <div class="code-block w-embed w-script">
     <script>
       {
@@ -1782,15 +1780,18 @@
           const scribbleEl = document.querySelector("[data-hero='scribble']");
           const scribble = scribbleEl ? [...scribbleEl.children[0].children] : [];
 
-          gsap.to(layer, {
-            yPercent: 10,
-            scrollTrigger: {
-              trigger: layer,
-              start: "top top",
-              end: "+=100%",
-              scrub: true,
-            },
-          });
+          if (layer && getComputedStyle(layer).display !== "none") {
+            gsap.to(layer, {
+              yPercent: 10,
+              scrollTrigger: {
+                trigger: layer,
+                start: "top top",
+                end: "+=100%",
+                scrub: true,
+              },
+            });
+            gsap.set(layer, { autoAlpha: 1 });
+          }
 
           // Split text
           if (title) titleSplit = split(title.children, "chars");
@@ -1798,7 +1799,6 @@
 
           // Initial state
           if (titleSplit) gsap.set((titleSplit.flat() || []).filter(Boolean), { yPercent: -110 });
-          gsap.set(layer, { autoAlpha: 1 });
           if (toggle) gsap.set(toggle, { scale: 3, rotation: 360 });
           if (parSplit) gsap.set(parSplit, { autoAlpha: 0, yPercent: 100 });
           gsap.set(alpha, { autoAlpha: 0, scale: 0.7 });
@@ -4175,7 +4175,7 @@
       </script>
     </div>
   </section>
-  <footer data-select="inverse" class="sec footer">
+  <footer data-select="inverse" class="sec footer" style="padding-bottom: 2.5rem !important;">
     <div class="comp footer">
       <div class="footer-line">
         <div class="col-half">
@@ -4352,7 +4352,7 @@ DevOps: Docker, Kubernetes, AWS, Terraform, GitHub Actions
 Contact: nikhil2004nb@gmail.com`;
                   } else if (secId === "scrolltrigger") {
                     copyContent = `SYSTEM ARCHITECTURE BLUEPRINT
-Throughput: 100k+ events/sec | P99 Latency: <50ms | Uptime: 99.99%
+Throughput: 100k+ events/sec | P99 Latency: < 50ms | Uptime: 99.99%
 Architecture: Microservices + Event Sourcing (Kafka) + Edge Invalidation
 Security: Zero-Trust OAuth 2.0 / JWT + Cloudflare WAF
 Architect: Nikhil Bansode (nikhil2004nb@gmail.com)`;
