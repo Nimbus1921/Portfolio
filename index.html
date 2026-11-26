@@ -1246,6 +1246,229 @@
     }
   </style>
 
+
+  <!-- MASTER MOBILE & RESPONSIVE POLISH -->
+  <style id="master-mobile-responsive">
+    @media screen and (max-width: 768px) {
+      /* Global Viewport & Container Constraints */
+      html, body {
+        overflow-x: clip !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+      }
+
+      /* Navigation Bar */
+      .desktop-nav-links {
+        display: none !important;
+      }
+      .mobile-nav-actions {
+        display: flex !important;
+      }
+      .nav-w .nav {
+        padding: 10px 16px !important;
+      }
+      .nav-brand-title {
+        font-size: 18px !important;
+        letter-spacing: 0.02em !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+      }
+      .nav-dev-badge {
+        display: none !important;
+      }
+      #mobile-nav-drawer.open {
+        display: flex !important;
+      }
+
+      /* Hero Section */
+      .hero-text, .main-he-span {
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        hyphens: manual !important;
+      }
+      .hero-text {
+        font-size: clamp(2rem, 8.5vw, 3.1rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 1.5rem !important;
+        padding: 0 0.5rem !important;
+        text-align: center !important;
+      }
+      .main-he-span {
+        display: block !important;
+        white-space: normal !important;
+      }
+      .comp.toggle-w,
+      .toggle-comp {
+        margin-top: 2.25rem !important;
+        transform: scale(0.85) !important;
+        transform-origin: center center !important;
+      }
+      .kinetic-row .k-box {
+        font-size: 13px !important;
+        padding: 6px 14px !important;
+      }
+      .hero-btn-w {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+      }
+      .hero-btn-w .btn-w {
+        width: 90% !important;
+        max-width: 320px !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+
+      /* Flower / Creative Showcase Section */
+      .flower-anim-track {
+        height: 260vh !important;
+      }
+      .flower-stage {
+        width: min(52vmin, 230px) !important;
+        height: min(52vmin, 230px) !important;
+      }
+      .flower-about-heading {
+        font-size: clamp(1.8rem, 6.5vmin, 2.8rem) !important;
+      }
+      .flower-bg-word {
+        font-size: clamp(1.2rem, 4.2vmin, 2.2rem) !important;
+      }
+      .flower-bg-typography {
+        padding: 0 0.75rem !important;
+      }
+
+      /* Projects Section (#flip) */
+      .selected-projects-title {
+        font-size: clamp(2.4rem, 8vw, 3.8rem) !important;
+      }
+      #flip .flip-item {
+        aspect-ratio: 16/9 !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+      }
+      .flip-card-container {
+        max-width: 94vw !important;
+        margin: 0 auto !important;
+      }
+      .flip-visit-btn {
+        bottom: -18px !important;
+        right: 12px !important;
+        padding: 6px 14px !important;
+        font-size: 12px !important;
+      }
+
+      /* Career Chronicle / Journey (#scrolltrigger) */
+      .scrolltrigger-sec {
+        height: 480svh !important;
+      }
+      .journey-stage-wrap {
+        overflow: hidden !important;
+      }
+      .journey-title-banner {
+        left: 4% !important;
+        top: 2.5% !important;
+        transform: scale(0.75) rotate(-2deg) !important;
+        transform-origin: top left !important;
+      }
+      .j-milestone {
+        position: absolute !important;
+        left: 50% !important;
+        top: 52% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 90vw !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+        z-index: 20 !important;
+      }
+      .j-milestone .j-card {
+        font-size: 0.84rem !important;
+        line-height: 1.4 !important;
+        padding: 0.75rem 0.95rem !important;
+      }
+      .j-milestone .sticker-illus {
+        transform: scale(0.85);
+        transform-origin: bottom left;
+      }
+
+      /* Services Section (#services) */
+      .services-track-sec {
+        height: 240vh !important;
+      }
+      .services-header-box {
+        transform: scale(0.9) !important;
+      }
+      .services-title {
+        font-size: clamp(2rem, 7.5vw, 3.2rem) !important;
+      }
+      .service-card {
+        max-width: 92vw !important;
+        padding: 1.25rem !important;
+      }
+
+      /* Contact Section (#contact) */
+      #contact {
+        padding: 3.5rem 1rem 4.5rem 1rem !important;
+      }
+      .contact-decor-layer > div:first-child {
+        transform: scale(0.5) !important;
+        transform-origin: top right !important;
+        top: 10px !important;
+        right: 10px !important;
+        opacity: 0.35 !important;
+      }
+      .contact-decor-layer .decor-airplane {
+        transform: scale(0.65) rotate(10deg) !important;
+        top: 20px !important;
+        right: 20px !important;
+      }
+      .contact-editorial-title {
+        font-size: clamp(2.4rem, 8.5vw, 4rem) !important;
+      }
+      .cw-input, .cw-textarea {
+        font-size: 14px !important;
+      }
+
+      /* Marquee Section */
+      .scroller-text {
+        font-size: 22vw !important;
+      }
+      .marquee-img {
+        width: 6rem !important;
+        height: 6rem !important;
+      }
+
+      /* Footer Section */
+      .sub-nav-w {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.65rem 1.25rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        margin: 0 auto !important;
+      }
+      .footer-line {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+      }
+      .col-half {
+        width: 100% !important;
+      }
+      .footer-tagline-w p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+      }
+      .footer-logo {
+        max-width: 95vw !important;
+        margin: 0 auto !important;
+      }
+    }
+  </style>
+
 </head>
 
 <body style="">
@@ -1386,18 +1609,46 @@
     <div class="nav" style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 12px 24px;">
       <div class="logo-banner-w" style="display: flex; align-items: center; gap: 14px;">
         <a href="#hero" style="text-decoration: none; color: #080808; display: flex; align-items: center; gap: 10px;">
-          <span style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; letter-spacing: 0.04em; color: #080808; text-transform: uppercase;">NIKHIL BANSODE</span>
-          <span style="font-family: 'Worksans', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #00F02A; border: 2px solid #080808; color: #000; box-shadow: 2px 2px 0 #080808; letter-spacing: 0.06em; text-transform: uppercase;">FULL STACK DEV</span>
+          <span class="nav-brand-title" style="font-family: 'Anton', Impact, sans-serif; font-size: 24px; letter-spacing: 0.04em; color: #080808; text-transform: uppercase; white-space: nowrap; line-height: 1.1;">NIKHIL BANSODE</span>
+          <span class="nav-dev-badge" style="font-family: 'Worksans', sans-serif; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; background: #00F02A; border: 2px solid #080808; color: #000; box-shadow: 2px 2px 0 #080808; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;">FULL STACK DEV</span>
         </a>
       </div>
-      <div class="nav-links-w" style="display: flex; align-items: center; gap: 18px;">
+
+      <!-- Desktop Navigation Links -->
+      <div class="nav-links-w desktop-nav-links" style="display: flex; align-items: center; gap: 18px;">
         <a href="#hero" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">Home</a>
         <a href="#flower-track" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">About</a>
         <a href="#flip" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">Projects</a>
         <a href="#scrolltrigger" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">Journey</a>
         <a href="#services" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">Services</a>
         <a href="#contact" style="font-family: 'Anton', Impact, sans-serif; font-size: 15px; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.02em;">Contact</a>
-        <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 14px; background: #FFE500; color: #080808; text-decoration: none; padding: 6px 16px; border-radius: 999px; border: 2.5px solid #080808; box-shadow: 3px 3px 0 #080808; text-transform: uppercase;">Resume ↗</a>
+        <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 14px; background: #FFE500; color: #080808; text-decoration: none; padding: 6px 16px; border-radius: 999px; border: 2.5px solid #080808; box-shadow: 3px 3px 0 #080808; text-transform: uppercase; white-space: nowrap;">Resume ↗</a>
+      </div>
+
+      <!-- Mobile Navigation Actions (<= 768px) -->
+      <div class="mobile-nav-actions" style="display: none; align-items: center; gap: 10px;">
+        <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 12px; background: #FFE500; color: #080808; text-decoration: none; padding: 5px 12px; border-radius: 999px; border: 2px solid #080808; box-shadow: 2px 2px 0 #080808; text-transform: uppercase; white-space: nowrap;">Resume ↗</a>
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 42px; height: 42px; background: #ffffff; border: 2.5px solid #080808; border-radius: 8px; box-shadow: 2.5px 2.5px 0 #080808; cursor: pointer; padding: 8px; gap: 5px;">
+          <span class="menu-bar" style="display: block; width: 22px; height: 2.5px; background: #080808; border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease;"></span>
+          <span class="menu-bar" style="display: block; width: 22px; height: 2.5px; background: #080808; border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease;"></span>
+          <span class="menu-bar" style="display: block; width: 22px; height: 2.5px; background: #080808; border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease;"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-nav-drawer" style="display: none; position: fixed; top: 62px; left: 0; width: 100%; height: calc(100vh - 62px); height: calc(100svh - 62px); background: #FFFDF9; border-top: 3px solid #080808; z-index: 99999; flex-direction: column; justify-content: space-between; padding: 2rem 1.5rem 3rem 1.5rem; overflow-y: auto; box-sizing: border-box;">
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <a href="#hero" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Home <span>→</span></a>
+        <a href="#flower-track" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">About <span>→</span></a>
+        <a href="#flip" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Projects <span>→</span></a>
+        <a href="#scrolltrigger" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Journey <span>→</span></a>
+        <a href="#services" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Services <span>→</span></a>
+        <a href="#contact" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Contact <span>→</span></a>
+      </div>
+      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.85rem;">
+        <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.15rem; text-align: center; background: #FFE500; color: #080808; text-decoration: none; padding: 12px; border-radius: 999px; border: 3px solid #080808; box-shadow: 4px 4px 0 #080808; text-transform: uppercase;">View Official Resume ↗</a>
+        <div style="font-family: 'Worksans', sans-serif; font-size: 12px; color: #666; text-align: center;">Nikhil Bansode • Full Stack Developer</div>
       </div>
     </div>
   </nav>
@@ -1628,13 +1879,15 @@
 
           const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-          // Smoothly animate out navigation bars
-          tl.to(".nav-w", {
-            autoAlpha: 0,
-            y: -40,
-            duration: 0.35,
-            ease: "power2.inOut"
-          }, 0);
+          // Smoothly animate out navigation bars (desktop only)
+          if (window.innerWidth > 768) {
+            tl.to(".nav-w", {
+              autoAlpha: 0,
+              y: -40,
+              duration: 0.35,
+              ease: "power2.inOut"
+            }, 0);
+          }
 
           // Step 1: Smoothly transition out existing headline, description, and CTA
           tl.to(titleSplit ? titleSplit.flat().filter(Boolean) : "[data-hero='title']", {
@@ -1694,13 +1947,15 @@
           tl.to(".kinetic-hero-backdrop", { autoAlpha: 0, duration: 0.32 }, 0.1);
           tl.set(".kinetic-hero-stage", { visibility: "hidden", autoAlpha: 0 });
 
-          // Smoothly restore navigation bars
-          tl.to(".nav-w", {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.4,
-            ease: "power2.out"
-          }, 0.18);
+          // Smoothly restore navigation bars (desktop only)
+          if (window.innerWidth > 768) {
+            tl.to(".nav-w", {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.4,
+              ease: "power2.out"
+            }, 0.18);
+          }
 
           // Restore headline text
           tl.to(titleSplit ? titleSplit.flat().filter(Boolean) : "[data-hero='title']", {
@@ -2050,12 +2305,17 @@
           }
         });
 
+        const isMobFlower = window.innerWidth <= 768;
+        const flScale = isMobFlower ? 2.8 : 5.2;
+        const hdgX = isMobFlower ? 0 : -300;
+        const hdgY = isMobFlower ? -90 : -160;
+
         // 1. Smooth Hardware-Accelerated Flower Rotation & Scale (Entire flower artwork animates together!)
         flowerTl.to(".flower-art-wrapper", { rotation: 220, scale: 1.25, transformOrigin: "50% 50%", ease: "none", duration: 0.50 }, 0);
-        flowerTl.to(".flower-art-wrapper", { scale: 5.2, ease: "power2.in", duration: 0.35 }, 0.50);
+        flowerTl.to(".flower-art-wrapper", { scale: flScale, ease: "power2.in", duration: 0.35 }, 0.50);
 
         // 2. "About Me" Heading: emerges gracefully from behind the flower, floats upward
-        flowerTl.to(".flower-about-heading", { x: -300, y: -160, autoAlpha: 1, scale: 1, duration: 0.20, ease: "power2.out" }, 0.05);
+        flowerTl.to(".flower-about-heading", { x: hdgX, y: hdgY, autoAlpha: 1, scale: 1, duration: 0.20, ease: "power2.out" }, 0.05);
         flowerTl.to(".flower-about-heading", { y: -480, autoAlpha: 0, duration: 0.16, ease: "power2.in" }, 0.28);
 
         // 3. Behind-the-Flower Kinetic Typography: revealed smoothly on scroll
@@ -2271,51 +2531,77 @@
 
               // 1. Alternating fly-in & pop animation on BOTH box (.flip-item) and inner image (.flip-project-img)
               if (item) {
+                const isMobFlip = window.innerWidth <= 768;
                 const flyTl = gsap.timeline({
                   scrollTrigger: {
                     trigger: li,
-                    start: "top 94%",
-                    end: "center 54%",
+                    start: isMobFlip ? "top 96%" : "top 94%",
+                    end: isMobFlip ? "center 68%" : "center 54%",
                     scrub: 1,
                     invalidateOnRefresh: true,
                   }
                 });
 
-                // Pop out from LEFT and RIGHT side of the screen (purely horizontal, not from below)
-                // with center-slit clipPath expansion, back-scale pop, and inner image counter-zoom
-                flyTl.fromTo(
-                  item,
-                  {
-                    clipPath: "inset(10% 50% 10% 50%)",
-                    xPercent: direction * 105,
-                    scale: 0.5,
-                  },
-                  {
-                    clipPath: "inset(0% 0% 0% 0%)",
-                    xPercent: 0,
-                    scale: 1,
-                    ease: "power3.out",
-                    duration: 1,
-                  },
-                  0
-                );
-
-                // Inner image counter-motion (scale: 1.8 -> 1, xPercent: counter-direction -> 0)
-                if (imgEl) {
+                if (isMobFlip) {
+                  // Mobile: subtle vertical entrance to prevent cards overflowing off-screen
                   flyTl.fromTo(
-                    imgEl,
+                    item,
                     {
-                      scale: 1.8,
-                      xPercent: -direction * 25,
+                      opacity: 0.25,
+                      y: 40,
+                      scale: 0.95,
                     },
                     {
+                      opacity: 1,
+                      y: 0,
                       scale: 1,
+                      ease: "power2.out",
+                      duration: 1,
+                    },
+                    0
+                  );
+                  if (imgEl) {
+                    flyTl.fromTo(
+                      imgEl,
+                      { scale: 1.15 },
+                      { scale: 1, ease: "power2.out", duration: 1 },
+                      0
+                    );
+                  }
+                } else {
+                  // Desktop: Pop out from LEFT and RIGHT side of the screen
+                  flyTl.fromTo(
+                    item,
+                    {
+                      clipPath: "inset(10% 50% 10% 50%)",
+                      xPercent: direction * 105,
+                      scale: 0.5,
+                    },
+                    {
+                      clipPath: "inset(0% 0% 0% 0%)",
                       xPercent: 0,
+                      scale: 1,
                       ease: "power3.out",
                       duration: 1,
                     },
                     0
                   );
+                  if (imgEl) {
+                    flyTl.fromTo(
+                      imgEl,
+                      {
+                        scale: 1.8,
+                        xPercent: -direction * 25,
+                      },
+                      {
+                        scale: 1,
+                        xPercent: 0,
+                        ease: "power3.out",
+                        duration: 1,
+                      },
+                      0
+                    );
+                  }
                 }
               }
 
@@ -2780,7 +3066,8 @@
                 }
 
                 // Staggered milestone reveals synchronized with moving indicator
-                milestones.forEach(m => {
+                const isMobRoad = window.innerWidth <= 768;
+                milestones.forEach((m, idx) => {
                   const node = section.querySelector(m.el);
                   if (node) {
                     const mTime = roadStart + (roadDuration * m.prog);
@@ -2791,6 +3078,19 @@
                       duration: 0.45,
                       ease: "back.out(1.4)"
                     }, Math.max(roadStart, mTime - 0.08));
+
+                    // On mobile, fade out current card when next arrives to prevent vertical/horizontal overlap
+                    if (isMobRoad && idx < milestones.length - 1) {
+                      const nextProg = milestones[idx + 1].prog;
+                      const nextTime = roadStart + (roadDuration * nextProg);
+                      tl.to(node, {
+                        autoAlpha: 0,
+                        y: -25,
+                        scale: 0.92,
+                        duration: 0.35,
+                        ease: "power2.in"
+                      }, nextTime - 0.12);
+                    }
                   }
                 });
 
@@ -3497,7 +3797,11 @@
               });
               section._servicesTl = tl;
 
-              // PHASE 1: BACKGROUND CLOUD-EXPAND ANIMATION (0.0 to 2.8)
+              const isMobServ = window.innerWidth <= 768;
+              const p1Dur = isMobServ ? 1.0 : 2.8;
+              const p2Start = isMobServ ? 1.0 : 2.8;
+
+              // PHASE 1: BACKGROUND CLOUD-EXPAND ANIMATION
               tl.fromTo(
                 frame,
                 {
@@ -3509,7 +3813,7 @@
                   clipPath: "inset(0% 0% 0% 0%)",
                   yPercent: 0,
                   scale: 1,
-                  duration: 2.8,
+                  duration: p1Dur,
                   ease: "power3.inOut",
                 },
                 0
@@ -3524,20 +3828,20 @@
                 {
                   scale: 1,
                   yPercent: 0,
-                  duration: 2.8,
+                  duration: p1Dur,
                   ease: "power3.inOut",
                 },
                 0
               );
 
-              // PHASE 2: SERVICES HEADING & ILLUSTRATIONS REVEAL (2.8 to 4.2)
+              // PHASE 2: SERVICES HEADING & ILLUSTRATIONS REVEAL
               tl.to(headerBox, {
                 autoAlpha: 1,
                 y: 0,
                 scale: 1,
                 duration: 1.2,
                 ease: "back.out(1.5)"
-              }, 2.8);
+              }, p2Start);
 
               tl.to(illLeft, {
                 autoAlpha: 1,
@@ -3792,7 +4096,7 @@
 
           <div style="display: flex; flex-direction: column;">
             <label style="font-family: 'Work Sans', sans-serif; font-size: 13px; font-weight: 700; color: #270f03; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px;">Subject</label>
-            <input type="text" name="subject" required placeholder="Project Collaboration / Job Opportunity / General Inquiry" class="cw-input" style="width: 100%; padding: 12px 14px; background: rgba(255, 255, 255, 0.75); border: 1.5px solid rgba(39, 15, 3, 0.28); border-radius: 10px; font-family: 'Work Sans', sans-serif; font-size: 14px; color: #270f03; outline: none; transition: all 0.2s ease; box-sizing: border-box;" />
+            <input type="text" name="subject" required placeholder="Project / Job Inquiry" class="cw-input" style="width: 100%; padding: 12px 14px; background: rgba(255, 255, 255, 0.75); border: 1.5px solid rgba(39, 15, 3, 0.28); border-radius: 10px; font-family: 'Work Sans', sans-serif; font-size: 14px; color: #270f03; outline: none; transition: all 0.2s ease; box-sizing: border-box;" />
           </div>
 
           <div style="display: flex; flex-direction: column;">
@@ -4574,6 +4878,60 @@ Email: nikhil2004nb@gmail.com | GitHub: github.com/Nimbus1921`;
       } catch (e) { }
     })();
   </script>
+
+  <!-- Mobile Navigation Drawer Controller -->
+  <script>
+    (function() {
+      function initMobileDrawer() {
+        const btn = document.getElementById("mobile-menu-btn");
+        const drawer = document.getElementById("mobile-nav-drawer");
+        if (!btn || !drawer) return;
+
+        let isOpen = false;
+        function toggleDrawer(openState) {
+          isOpen = typeof openState === "boolean" ? openState : !isOpen;
+          if (isOpen) {
+            drawer.classList.add("open");
+            btn.setAttribute("aria-expanded", "true");
+            const bars = btn.querySelectorAll(".menu-bar");
+            if (bars.length === 3) {
+              bars[0].style.transform = "translateY(7.5px) rotate(45deg)";
+              bars[1].style.opacity = "0";
+              bars[2].style.transform = "translateY(-7.5px) rotate(-45deg)";
+            }
+          } else {
+            drawer.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+            const bars = btn.querySelectorAll(".menu-bar");
+            if (bars.length === 3) {
+              bars[0].style.transform = "none";
+              bars[1].style.opacity = "1";
+              bars[2].style.transform = "none";
+            }
+          }
+        }
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleDrawer();
+        });
+
+        drawer.querySelectorAll("a").forEach(a => {
+          a.addEventListener("click", () => {
+            toggleDrawer(false);
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initMobileDrawer);
+      } else {
+        initMobileDrawer();
+      }
+    })();
+  </script>
+
 </body>
 
 </html>
