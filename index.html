@@ -221,6 +221,9 @@
     .toggle-w {
       z-index: 100 !important;
       position: relative !important;
+      top: 0 !important;
+      margin-top: 2.5rem !important;
+      margin-bottom: 3.2rem !important;
     }
 
     /* Toggle track and ball styling with spring physics & shadow */
@@ -1364,7 +1367,7 @@
       .scrolltrigger-sec {
         height: auto !important;
         min-height: auto !important;
-        padding: 4.5rem 1rem 5.5rem 1rem !important;
+        padding: 4rem 1rem 5.5rem 1rem !important;
         overflow: visible !important;
         background-color: var(--secondary, #ffe9cf) !important;
         position: relative !important;
@@ -1406,12 +1409,14 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin-bottom: 2.5rem !important;
+        margin-bottom: 2.2rem !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
         transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
         filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.85)) !important;
       }
       .journey-title-banner .title-my {
@@ -1437,9 +1442,9 @@
         display: flex !important;
         flex-direction: column !important;
         gap: 1.6rem !important;
-        padding: 0 0.5rem 0 1.6rem !important;
+        padding: 0 0.25rem 0 1.5rem !important;
         border-left: 3.5px dashed #080808 !important;
-        margin-left: 0.85rem !important;
+        margin-left: 0.75rem !important;
         box-sizing: border-box !important;
       }
       .j-milestone {
@@ -1457,7 +1462,7 @@
       .j-milestone::before {
         content: '';
         position: absolute;
-        left: calc(-1.6rem - 10.5px);
+        left: calc(-1.5rem - 10.5px);
         top: 14px;
         width: 16px;
         height: 16px;
@@ -1477,10 +1482,18 @@
         background: #FFFDF9 !important;
         margin-top: 6px !important;
         max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .j-badge-pink, .j-badge-yellow, .j-badge-white {
         font-size: 0.72rem !important;
         padding: 0.18rem 0.55rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        max-width: 100% !important;
+      }
+      .j-milestone > div > div:first-child {
+        flex-wrap: wrap !important;
+        gap: 0.4rem !important;
       }
       .j-milestone .sticker-illus {
         transform: scale(0.85);
@@ -1950,7 +1963,7 @@
           <h1 data-hero="title" class="font-c hero-text"><span class="main-he-span">Turning Ideas into</span><span
               class="main-he-span">Digital Experiences.</span></h1>
         </div>
-        <div class="comp toggle-w"><svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="none"
+        <div class="comp toggle-w" style="top: 0 !important; margin-top: 2.5rem !important; margin-bottom: 3.2rem !important; position: relative !important; z-index: 100 !important;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" fill="none"
             viewBox="0 0 1384 1012" data-hero="scribble" class="scribbles-svg">
             <g class="scribbles-svg" clip-path="url(#a)">
               <path fill="currentColor"
@@ -2910,7 +2923,7 @@
                     <rect x="56" y="55" width="14" height="42" rx="2" fill="#d97706" stroke="#000000" stroke-width="3.2" />
                     <path d="M 12 18 L 86 18 L 102 36 L 86 54 L 12 54 Z" fill="#ffe600" stroke="#000000" stroke-width="3.5" />
                     <text x="20" y="32" font-size="11" font-weight="950" fill="#000000" font-family="sans-serif">THE</text>
-                    <text x="18" y="48" font-size="13" font-weight="950" fill="#000000" font-family="sans-serif">BEGINNING</text>
+                    <text x="18" y="48" font-size="11.5" font-weight="950" fill="#000000" font-family="sans-serif">BEGINNING</text>
                   </svg>
                   <div class="j-card" style="padding: 0.35rem 0.65rem; margin-top: -6px; font-size: 0.78rem; border-radius: 8px;">
                     PSBA English School, Aurangabad (CBSE — SSC: 85.8%). Discovered my passion for computer logic & programming.
@@ -3163,6 +3176,43 @@
                 const roadIndicator = section.querySelector("#road-indicator");
                 const roadPaths = section.querySelectorAll(".road-path");
                 const airplane = section.querySelector("#m9-airplane");
+
+                // Mobile check (<= 768px): Natural vertical road timeline with clean staggered entrance
+                if (window.innerWidth <= 768) {
+                  if (stageWrap) gsap.set(stageWrap, { autoAlpha: 1 });
+                  if (titleBanner) {
+                    gsap.set(titleBanner, {
+                      autoAlpha: 1,
+                      scale: 1,
+                      y: 0,
+                      rotate: 0,
+                      clearProps: "transform,opacity,visibility"
+                    });
+                  }
+                  milestones.forEach((m) => {
+                    const node = section.querySelector(m.el);
+                    if (node) {
+                      gsap.set(node, {
+                        autoAlpha: 1,
+                        scale: 1,
+                        y: 0,
+                        clearProps: "transform,opacity,visibility"
+                      });
+                      gsap.from(node, {
+                        scrollTrigger: {
+                          trigger: node,
+                          start: "top 92%",
+                          once: true,
+                        },
+                        opacity: 0,
+                        y: 25,
+                        duration: 0.5,
+                        ease: "power2.out",
+                      });
+                    }
+                  });
+                  return;
+                }
 
                 // Initialize SVG road paths stroke length
                 const roadStripe = section.querySelector("#road-stripe");
