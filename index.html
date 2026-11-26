@@ -1248,6 +1248,7 @@
 
 
   <!-- MASTER MOBILE & RESPONSIVE POLISH -->
+  <!-- MASTER MOBILE & RESPONSIVE POLISH -->
   <style id="master-mobile-responsive">
     @media screen and (max-width: 768px) {
       /* Global Viewport & Container Constraints */
@@ -1326,22 +1327,23 @@
         height: 260vh !important;
       }
       .flower-stage {
-        width: min(52vmin, 230px) !important;
-        height: min(52vmin, 230px) !important;
+        width: min(44vmin, 185px) !important;
+        height: min(44vmin, 185px) !important;
       }
       .flower-about-heading {
-        font-size: clamp(1.8rem, 6.5vmin, 2.8rem) !important;
+        font-size: clamp(1.8rem, 6.2vmin, 2.6rem) !important;
       }
       .flower-bg-word {
-        font-size: clamp(1.2rem, 4.2vmin, 2.2rem) !important;
+        font-size: clamp(1.1rem, 3.8vmin, 1.8rem) !important;
       }
       .flower-bg-typography {
-        padding: 0 0.75rem !important;
+        padding: 0 1.25rem !important;
       }
 
       /* Projects Section (#flip) */
       .selected-projects-title {
-        font-size: clamp(2.4rem, 8vw, 3.8rem) !important;
+        font-size: clamp(1.9rem, 6.8vw, 3.2rem) !important;
+        letter-spacing: 0.01em !important;
       }
       #flip .flip-item {
         aspect-ratio: 16/9 !important;
@@ -1360,7 +1362,7 @@
 
       /* Career Chronicle / Journey (#scrolltrigger) */
       .scrolltrigger-sec {
-        height: 480svh !important;
+        height: 450svh !important;
       }
       .journey-stage-wrap {
         overflow: hidden !important;
@@ -1376,24 +1378,32 @@
         left: 50% !important;
         top: 52% !important;
         transform: translate(-50%, -50%) !important;
-        width: 90vw !important;
-        max-width: 340px !important;
+        width: 86vw !important;
+        max-width: 320px !important;
         margin: 0 auto !important;
         z-index: 20 !important;
       }
       .j-milestone .j-card {
-        font-size: 0.84rem !important;
-        line-height: 1.4 !important;
-        padding: 0.75rem 0.95rem !important;
+        font-size: 0.82rem !important;
+        line-height: 1.38 !important;
+        padding: 0.7rem 0.9rem !important;
+      }
+      .j-badge-pink, .j-badge-yellow, .j-badge-white {
+        font-size: 0.68rem !important;
+        padding: 0.15rem 0.45rem !important;
+        white-space: nowrap !important;
       }
       .j-milestone .sticker-illus {
-        transform: scale(0.85);
+        transform: scale(0.82);
         transform-origin: bottom left;
       }
 
       /* Services Section (#services) */
       .services-track-sec {
-        height: 240vh !important;
+        height: 280vh !important;
+      }
+      .services-sticky-viewport {
+        padding-bottom: 2rem !important;
       }
       .services-header-box {
         transform: scale(0.9) !important;
@@ -1403,7 +1413,7 @@
       }
       .service-card {
         max-width: 92vw !important;
-        padding: 1.25rem !important;
+        padding: 1.15rem !important;
       }
 
       /* Contact Section (#contact) */
@@ -1411,16 +1421,12 @@
         padding: 3.5rem 1rem 4.5rem 1rem !important;
       }
       .contact-decor-layer > div:first-child {
-        transform: scale(0.5) !important;
-        transform-origin: top right !important;
-        top: 10px !important;
-        right: 10px !important;
-        opacity: 0.35 !important;
+        display: none !important;
       }
       .contact-decor-layer .decor-airplane {
-        transform: scale(0.65) rotate(10deg) !important;
-        top: 20px !important;
-        right: 20px !important;
+        transform: scale(0.6) rotate(10deg) !important;
+        top: 15px !important;
+        right: 15px !important;
       }
       .contact-editorial-title {
         font-size: clamp(2.4rem, 8.5vw, 4rem) !important;
@@ -1438,7 +1444,7 @@
         height: 6rem !important;
       }
 
-      /* Footer Section */
+      /* Footer Section Links Styling */
       .sub-nav-w {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -1448,6 +1454,21 @@
         max-width: 100% !important;
         padding: 0 1rem !important;
         margin: 0 auto !important;
+      }
+      .sub-nav-w .link-li-w.footer,
+      .sub-nav-w .link-li-w.footer div {
+        color: #FFE9CF !important;
+        opacity: 0.92 !important;
+        font-family: 'Anton', Impact, sans-serif !important;
+        font-size: 15px !important;
+        letter-spacing: 0.05em !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        transition: opacity 0.2s ease, color 0.2s ease;
+      }
+      .sub-nav-w .link-li-w.footer:hover div {
+        color: #FFE500 !important;
+        opacity: 1 !important;
       }
       .footer-line {
         flex-direction: column !important;
@@ -1467,11 +1488,53 @@
         margin: 0 auto !important;
       }
     }
+
+    /* Universal Footer Links Visibility across all viewports */
+    .sub-nav-w .link-li-w.footer,
+    .sub-nav-w .link-li-w.footer div {
+      color: #FFE9CF !important;
+      opacity: 0.92 !important;
+      font-family: 'Anton', Impact, sans-serif !important;
+      font-size: 15px !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+    }
+    .sub-nav-w .link-li-w.footer:hover div {
+      color: #FFE500 !important;
+      opacity: 1 !important;
+    }
   </style>
 
 </head>
 
 <body style="">
+
+  <!-- Mobile Drawer Menu Overlay (Root Stacking Context) -->
+  <div id="mobile-nav-drawer" style="display: none; position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100svh; background: #FFFDF9; z-index: 9999999 !important; flex-direction: column; justify-content: space-between; padding: 1.25rem 1.5rem 2.5rem 1.5rem; overflow-y: auto; box-sizing: border-box;">
+    <!-- Top bar with brand and Close Button -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2.5px solid #080808; padding-bottom: 1rem; margin-bottom: 1.25rem;">
+      <span style="font-family: 'Anton', Impact, sans-serif; font-size: 20px; letter-spacing: 0.04em; color: #080808; text-transform: uppercase;">NIKHIL BANSODE</span>
+      <button id="mobile-drawer-close-btn" aria-label="Close menu" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: #ffffff; border: 2.5px solid #080808; border-radius: 8px; box-shadow: 2px 2px 0 #080808; cursor: pointer; font-family: sans-serif; font-size: 20px; font-weight: 900; color: #080808; line-height: 1;">✕</button>
+    </div>
+    
+    <!-- Navigation Links -->
+    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+      <a href="#hero" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">Home <span>→</span></a>
+      <a href="#flower-track" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">About <span>→</span></a>
+      <a href="#flip" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">Projects <span>→</span></a>
+      <a href="#scrolltrigger" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">Journey <span>→</span></a>
+      <a href="#services" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">Services <span>→</span></a>
+      <a href="#contact" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.65rem;">Contact <span>→</span></a>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.15rem; text-align: center; background: #FFE500; color: #080808; text-decoration: none; padding: 12px; border-radius: 999px; border: 3px solid #080808; box-shadow: 4px 4px 0 #080808; text-transform: uppercase;">View Official Resume ↗</a>
+      <div style="font-family: 'Worksans', sans-serif; font-size: 12px; color: #666; text-align: center;">Nikhil Bansode • Full Stack Developer</div>
+    </div>
+  </div>
+
   <div class="w-embed"><!-- global custom component wrapper -->
 
     <style>
@@ -1636,22 +1699,7 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu Overlay -->
-    <div id="mobile-nav-drawer" style="display: none; position: fixed; top: 62px; left: 0; width: 100%; height: calc(100vh - 62px); height: calc(100svh - 62px); background: #FFFDF9; border-top: 3px solid #080808; z-index: 99999; flex-direction: column; justify-content: space-between; padding: 2rem 1.5rem 3rem 1.5rem; overflow-y: auto; box-sizing: border-box;">
-      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <a href="#hero" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Home <span>→</span></a>
-        <a href="#flower-track" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">About <span>→</span></a>
-        <a href="#flip" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Projects <span>→</span></a>
-        <a href="#scrolltrigger" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Journey <span>→</span></a>
-        <a href="#services" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Services <span>→</span></a>
-        <a href="#contact" class="mobile-drawer-link" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.85rem; color: #080808; text-decoration: none; text-transform: uppercase; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(8,8,8,0.08); padding-bottom: 0.75rem;">Contact <span>→</span></a>
-      </div>
-      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.85rem;">
-        <a href="resume.html" style="font-family: 'Anton', Impact, sans-serif; font-size: 1.15rem; text-align: center; background: #FFE500; color: #080808; text-decoration: none; padding: 12px; border-radius: 999px; border: 3px solid #080808; box-shadow: 4px 4px 0 #080808; text-transform: uppercase;">View Official Resume ↗</a>
-        <div style="font-family: 'Worksans', sans-serif; font-size: 12px; color: #666; text-align: center;">Nikhil Bansode • Full Stack Developer</div>
-      </div>
-    </div>
-  </nav>
+    </nav>
   <div id="smooth-wrapper" data-start="hidden" class="scroll-wrapper" style="opacity: 1; visibility: inherit;">
     <main id="smooth-content" class="main">
       <header id="hero" data-module="hero" class="sec hero">
@@ -2308,7 +2356,7 @@
         const isMobFlower = window.innerWidth <= 768;
         const flScale = isMobFlower ? 2.8 : 5.2;
         const hdgX = isMobFlower ? 0 : -300;
-        const hdgY = isMobFlower ? -90 : -160;
+        const hdgY = isMobFlower ? -120 : -160;
 
         // 1. Smooth Hardware-Accelerated Flower Rotation & Scale (Entire flower artwork animates together!)
         flowerTl.to(".flower-art-wrapper", { rotation: 220, scale: 1.25, transformOrigin: "50% 50%", ease: "none", duration: 0.50 }, 0);
@@ -3086,9 +3134,11 @@
                       tl.to(node, {
                         autoAlpha: 0,
                         y: -25,
-                        scale: 0.92,
-                        duration: 0.35,
-                        ease: "power2.in"
+                        scale: 0.90,
+                        duration: 0.32,
+                        ease: "power2.in",
+                        onComplete: () => { node.style.display = "none"; },
+                        onReverseComplete: () => { node.style.display = "block"; }
                       }, nextTime - 0.12);
                     }
                   }
@@ -4885,6 +4935,7 @@ Email: nikhil2004nb@gmail.com | GitHub: github.com/Nimbus1921`;
       function initMobileDrawer() {
         const btn = document.getElementById("mobile-menu-btn");
         const drawer = document.getElementById("mobile-nav-drawer");
+        const closeBtn = document.getElementById("mobile-drawer-close-btn");
         if (!btn || !drawer) return;
 
         let isOpen = false;
@@ -4893,6 +4944,7 @@ Email: nikhil2004nb@gmail.com | GitHub: github.com/Nimbus1921`;
           if (isOpen) {
             drawer.classList.add("open");
             btn.setAttribute("aria-expanded", "true");
+            document.body.style.overflow = "hidden";
             const bars = btn.querySelectorAll(".menu-bar");
             if (bars.length === 3) {
               bars[0].style.transform = "translateY(7.5px) rotate(45deg)";
@@ -4902,6 +4954,7 @@ Email: nikhil2004nb@gmail.com | GitHub: github.com/Nimbus1921`;
           } else {
             drawer.classList.remove("open");
             btn.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
             const bars = btn.querySelectorAll(".menu-bar");
             if (bars.length === 3) {
               bars[0].style.transform = "none";
@@ -4917,9 +4970,30 @@ Email: nikhil2004nb@gmail.com | GitHub: github.com/Nimbus1921`;
           toggleDrawer();
         });
 
-        drawer.querySelectorAll("a").forEach(a => {
-          a.addEventListener("click", () => {
+        if (closeBtn) {
+          closeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             toggleDrawer(false);
+          });
+        }
+
+        drawer.querySelectorAll("a").forEach(a => {
+          a.addEventListener("click", (e) => {
+            const href = a.getAttribute("href");
+            toggleDrawer(false);
+            if (href && href.startsWith("#")) {
+              e.preventDefault();
+              const target = document.querySelector(href);
+              if (target) {
+                if (window.lenis) {
+                  window.lenis.scrollTo(target, { offset: -65, duration: 1.2 });
+                } else {
+                  const targetTop = target.getBoundingClientRect().top + window.pageYOffset - 65;
+                  window.scrollTo({ top: targetTop, behavior: "smooth" });
+                }
+              }
+            }
           });
         });
       }
